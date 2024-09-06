@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Proxy Dashboard</h2>
+
+<div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search proxies...">
+</div>
+
+<table id="proxyTable">
+    <thead>
+        <tr>
+            <th>IP</th>
+            <th>Port</th>
+            <th>Protocol</th>
+            <th>Latency (ms)</th>
+            <th>Speed (Mbps)</th>
+            <th>Country</th>
+            <th>Anonymity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for proxy in proxies %}
+        <tr data-proxy-id="{{ proxy.id }}">
+            <td>{{ proxy.ip }}</td>
+            <td>{{ proxy.port }}</td>
+            <td>{{ proxy.protocol }}</td>
+            <td>{{ proxy.latency }}</td>
+            <td>{{ proxy.speed }}</td>
+            <td>{{ proxy.country }}</td>
+            <td>{{ proxy.anonymity }}</td>
+            <td>
+                <button class="btn test-proxy" data-proxy-id="{{ proxy.id }}">Test</button>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

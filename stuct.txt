@@ -1,0 +1,42 @@
+ProxyHarvester/
+├── src/
+│   ├── crawlers/
+│   │   ├── __init__.py
+│   │   ├── base_crawler.py
+│   │   ├── free_proxy_list_crawler.py
+│   │   ├── proxy_nova_crawler.py
+│   │   └── proxy_sources.py
+│   ├── proxy_checker/
+│   │   ├── __init__.py
+│   │   └── checker.py
+│   ├── database/
+│   │   ├── __init__.py
+│   │   └── db_manager.py
+│   ├── web_ui/
+│   │   ├── __init__.py
+│   │   ├── app.py
+│   │   ├── auth.py
+│   │   ├── static/
+│   │   │   ├── css/
+│   │   │   │   └── style.css
+│   │   │   ├── js/
+│   │   │   │   └── main.js
+│   │   │   └── img/
+│   │   │       └── logo.png
+│   │   └── templates/
+│   │       ├── base.html
+│   │       ├── login.html
+│   │       └── dashboard.html
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── console_display.py
+│   │   └── encryption.py
+│   └── main.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_crawlers.py
+│   ├── test_checker.py
+│   └── test_db_manager.py
+├── config.py
+├── requirements.txt
+└── README.md
